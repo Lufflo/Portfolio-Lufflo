@@ -10,6 +10,7 @@ html {
     margin: 0;
     padding: 0;
     color:  rgba(255, 255, 255, 0.907);
+    box-sizing: border-box;
 }
 
 a {
@@ -166,15 +167,13 @@ a img {
 }
 
 .boton-cv {
-    width: 180px;
-    height: 50px;
-    color: #fff;
-    background-color: #000000;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    font-size: 17px;
-
+    border: solid #0a4e93d4;
+    color: rgb(255, 255, 255);
+    font-size: 2vh;
+    font-family: 'Raleway';
+    background-color: #efefef2c; 
+    padding: 5px;
+    border-radius: 10px;
 }
 
 
@@ -212,14 +211,13 @@ a img {
     height: 92px;
 }
 
-#proyects {
-    min-height: 90vh;
-    margin-left: 15vh;
-    margin-right: 15vh;
-}
-
 .center {
     text-align: center;
+}
+
+.height-pro {
+    top:100vh;
+    bottom: 60vh;
 }
 
 .title-pro {
@@ -243,19 +241,38 @@ a img {
 }
 
 .pro1 {
+    box-sizing: content-box;
     padding: 65px;
     background-color: #00336681;
     width: 45vh;
     margin: 2vh;
 }
 
-
  .pro2 {
+    box-sizing: content-box;
     padding: 65px;
     background-color: #00336681;
     width: 45vh;
     margin: 2vh;
  }
+
+ .desc-pro {
+    padding-bottom: 3vh;
+ }
+
+.boton-pro {
+    border: solid;
+    color: white;
+    font-size: 2vh;
+    font-family: 'Raleway';
+    background-color: #efefef2c; 
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+
+
 
 
 .datos {
@@ -263,17 +280,80 @@ a img {
 
 }
 
-#usuario-datos {
-    text-align: center;
-    background-color: rgba(100, 100, 100, 0.66);
-    margin: 1rem ;
+.form {
+    min-height: 90vh;
+    margin-top: 45vh;
+    margin-bottom: 5vh;
+    width: 100%;
+
 }
 
 
 
+#usuario-datos {
+    text-align: center;
+    margin: 1rem ;
+}
+
+.container-data {
+    border: solid 5px rgba(0, 0, 0, 0.17);
+    font-size: 3vh;
+    text-align: center;
+    height: 40vh;
+    width: 85%;
+    border-radius: 20px;
+}
+
+.boton-info {
+    border: solid 1px black;
+    width: 20%;
+    padding: 6px;
+    background: none;
+    margin-top: 12px;
+
+}
+
+.contact-info {
+    font-size: 2.4vh;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;   
+}
+
+
+.container-info {
+    background: #003366ff;
+    border: 2px solid #081f37bb;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.form-data {
+    justify-content: center;
+    display: flex;
+    
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.439);
+    height: 18vh;
+}
+
 
 @media screen and (max-width: 850px) {
     header, .hero-wrap {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .proyects, div {
         flex-direction: column;
     }
 }

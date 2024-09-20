@@ -214,36 +214,48 @@ a img {
 
 #proyects {
     min-height: 90vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+}
+
+.center {
+    text-align: center;
 }
 
 .title-pro {
     font-size: 50px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
 .container-pro {
-    margin-left: 15vh;
-    margin-right: 15vh;
-    background-color: red;
+    background-color: #0000005b;
+    display: inline-flex;
+    flex-direction: column;
 }
+
+
+
+.container-pro2 {
+    background-color: #0000005b;
+    display: inline-flex;
+    flex-direction: column;
+}
+
 .pro1 {
-    background-color: #d0baba;
-    display: block;
-    margin-top: 4vh;
-    margin-left: 15vh;
-    height: 40vh;
-    width: 50ch;
-    border-radius: 10%;
-}
-
-.text-pro {
-    padding-top: 35px;
-    padding-left: 40px;
+    padding: 65px;
+    background-color: #00336681;
+    width: 45vh;
+    margin: 2vh;
 }
 
 
-
+ .pro2 {
+    padding: 65px;
+    background-color: #00336681;
+    width: 45vh;
+    margin: 2vh;
+ }
 
 
 .datos {

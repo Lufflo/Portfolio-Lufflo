@@ -1,5 +1,7 @@
 html {
     font-family: 'Raleway', sans-serif;
+    scrollbar-width: none;
+
 }
 
 .container {
@@ -10,7 +12,7 @@ html {
     margin: 0;
     padding: 0;
     color:  rgba(255, 255, 255, 0.907);
-    box-sizing: border-box;
+    
 }
 
 a {
@@ -20,30 +22,33 @@ a {
 
 
 body{
+    display: flex;
+    flex-direction: column  ;
+    padding-top: 100px;
     margin: 0;
-       background: linear-gradient(180deg, #1a2e45, #003366)
+    background: linear-gradient(180deg, #1a2e45, #003366);
 }
 
 
 header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+        /* Otros estilos para el encabezado */
     position: fixed;
     display: flex;
     justify-content: space-between;
-    height: 8vh;
+    min-height: 8vh;
     background-color: #FFCC00;
     align-items: center;
-    margin-bottom: 1rem;
-    width: 100%;
-
 }
 
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 15vh;
+    margin-left: 10%;
 }
-
-.position 
 
 .logo img {
     width: 50px;
@@ -53,15 +58,16 @@ header {
 }
 
 .right {
-    margin-right: 15vh;
+    margin-right: 10vh;
     justify-content: end;
     align-items: center;
+    
 }
 
 nav a {
-    flex-direction: row;
-    font-weight: 600;
     padding: 14px 13px;
+    font-weight: 600;
+
 }
 
 nav a:hover {
@@ -71,52 +77,10 @@ nav a:hover {
 
 
 
-/* section section {
-    flex-grow: 1;
-}
-
-.container {
-    font-size: 0.8rem;
-    display: flex;
-}
-
-.container h1 {
-    font-size: 3rem;
-}
-
-section h1 {
-    padding-top: 100px;
-    margin-left: 15vh;
-}
-
-.container p {
-    text-align: auto;
-    padding: 2px;
-    margin-left: 15vh;
-    display: inline;
-}
-
-.img-art img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    display: flex;
-}
-
-.descripcion {
-
-    text-align: left;
-    font-size: 16px;
-    color: rgb(168, 160, 160);
-}
-
- */
-
-
 
 
 .hero-wrap {
-    min-height: 100vh;
+    min-height: 15vh;
     padding-top: 15vh;
 }
 
@@ -126,27 +90,31 @@ section h1 {
 
 }
 
+#titulo span {
+    color:  rgba(255,0,10,0.76);
+}
+
 .descripcion {
     color: #ffffffd7;
 }
-article h1 span {
-    color:  rgba(255,0,10,0.76);
-}
+
 .hero h1 {
     font-size: 3rem;
 }
 
-.hero {
+.hero {           
+    justify-content: center;
+
     width: 100%;
     padding: 80px 0 ;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .hero-info {
-    padding-left: 15vh;
-    width: 45%;
+    padding: 0 3rem ;
+    margin-right: 6rem;
+    max-width: 500px;
 }
 
 a img {
@@ -154,16 +122,24 @@ a img {
     height: 40px;
     border-radius: 50%;
     border: solid #D9B382 0.1vh;
-    margin-top: 1.444vh;
+
 }
 
 .hero-img img {
+    display: flex;
     width: 400px;
     height: 400px;
     border-radius: 50%;
     box-shadow: 0 0 100px rgb(199, 148, 148);
     animation: glowing 2s alternate-reverse infinite;
-    margin-right: 15vh;
+    margin-left: 6rem;
+}
+
+.links {
+    margin-top: 0.9rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 .boton-cv {
@@ -172,16 +148,17 @@ a img {
     font-size: 2vh;
     font-family: 'Raleway';
     background-color: #efefef2c; 
-    padding: 5px;
+    margin: 15px;
     border-radius: 10px;
 }
 
 
 #tech-title {
+    padding-top: 15vh;
     font-size: 50px;
     margin-bottom: 20px;
     text-align: center;
-    margin-top: 35vh;
+    padding-top: 15vh;
 }
 
 .container-tech {
@@ -192,32 +169,37 @@ a img {
     align-items: center;
     text-align: center;
     justify-content: center;
+    min-width: none;
 }
 
 #tech{
     text-align: center;
-    min-height: 90vh;
+
     margin-left: 15vh;
     margin-right: 15vh;
     align-items: center;
     justify-content: center;
+    max-width: 1980px;
 }
 
 
 
 .img-tech img {
     margin-left: 15px;
-    display: inline-block;
     height: 92px;
+    max-width: 700px;
+}
+
+#proyects {
+    min-height: 15vh;
+    padding-top: 15vh;
+    width: 100%;
+
 }
 
 .center {
     text-align: center;
-}
 
-.height-pro {
-    top:100vh;
-    bottom: 60vh;
 }
 
 .title-pro {
@@ -277,12 +259,12 @@ a img {
 
 .datos {
     text-align: center;
-
+    padding-top: 5vh;
 }
 
-.form {
+#form {
     min-height: 90vh;
-    margin-top: 45vh;
+    padding-top: 15vh;
     margin-bottom: 5vh;
     width: 100%;
 
@@ -290,26 +272,30 @@ a img {
 
 
 
-#usuario-datos {
+.usuario-datos {
     text-align: center;
-    margin: 1rem ;
+    margin: 2vh ;
+    height: 20%;
 }
 
-.container-data {
-    border: solid 5px rgba(0, 0, 0, 0.17);
+#container-data {
+
+    border: solid 10px rgba(0, 0, 0, 0.257);
     font-size: 3vh;
     text-align: center;
-    height: 40vh;
+    height: 60vh;
     width: 85%;
     border-radius: 20px;
 }
 
 .boton-info {
-    border: solid 1px black;
-    width: 20%;
+    background: transparent;
+    border: solid 1px #76767665;
+    width: 13%;
     padding: 6px;
     background: none;
     margin-top: 12px;
+    border-radius: 7px;
 
 }
 
@@ -325,11 +311,14 @@ a img {
 
 
 .container-info {
-    background: #003366ff;
-    border: 2px solid #081f37bb;
+    background: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid #7676767c;
     margin: 10px;
+    margin-bottom: 15px;
     padding: 12px;
-    border-radius: 5px;
     width: 50%;
 }
 
@@ -345,15 +334,37 @@ footer {
     height: 18vh;
 }
 
-
-@media screen and (max-width: 850px) {
-    header, .hero-wrap {
-        flex-direction: column;
-    }
+.info-footer {
+    display: inline-block;
 }
 
-@media screen and (max-width: 850px) {
-    .proyects, div {
-        flex-direction: column;
+
+
+@media (max-width:850px) {
+    .logo {
+        margin: 0;
+        padding: 0;
     }
+
+
+    .hero-info {
+        min-width: 10rem;
+
+    }
+
+    .right {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+
+        flex-direction: column;
+        
+
+    }
+    nav, a{
+        padding: 10px 0px;
+        
+    }
+
 }

@@ -32,16 +32,14 @@ body{
 
 header {
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 999;
         /* Otros estilos para el encabezado */
     position: fixed;
     display: flex;
     justify-content: space-between;
-    min-height: 8vh;
     background-color: #FFCC00;
     align-items: center;
+    padding: 15px;
 }
 
 .logo {
@@ -51,10 +49,9 @@ header {
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    border: solid #D9B382 1px;
+    width: 45px;
+    height: 45px;
+
 }
 
 .right {
@@ -65,7 +62,9 @@ header {
 }
 
 nav a {
+    font-size: 1rem;
     padding: 14px 13px;
+    margin: 5px 0;
     font-weight: 600;
 
 }
@@ -74,6 +73,14 @@ nav a:hover {
     color: #ff0000b1;
     transition: ease 0.3s;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -126,11 +133,12 @@ a img {
 }
 
 .hero-img img {
+    width: 100%;
     display: flex;
-    width: 400px;
-    height: 400px;
+    max-width: 450px;
+    height: auto;
     border-radius: 50%;
-    box-shadow: 0 0 100px rgb(199, 148, 148);
+    box-shadow: 0 0 20px rgb(199, 148, 148);
     animation: glowing 2s alternate-reverse infinite;
     margin-left: 6rem;
 }
@@ -174,12 +182,11 @@ a img {
 
 #tech{
     text-align: center;
-
-    margin-left: 15vh;
-    margin-right: 15vh;
+    margin-left: 10rem;
+    margin-right: 10rem;
     align-items: center;
     justify-content: center;
-    max-width: 1980px;
+
 }
 
 
@@ -284,7 +291,7 @@ a img {
     font-size: 3vh;
     text-align: center;
     height: 60vh;
-    width: 85%;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -330,41 +337,118 @@ a img {
 
 
 footer {
-    background-color: rgba(0, 0, 0, 0.439);
-    height: 18vh;
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.452);
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.social-icons {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
 }
 
-.info-footer {
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 32px;
     display: inline-block;
+    margin: 0 10px;
+    transition: 0.6s;
 }
 
+.icon:hover {
+    transform: translateY(-6px);
+}
 
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 7px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+
+.menu-icon {
+    margin: 0px 10px;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.60;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    
+}
 
 @media (max-width:850px) {
+
     .logo {
         margin: 0;
         padding: 0;
     }
-
-
-    .hero-info {
-        min-width: 10rem;
-
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
     }
 
+    .hero-img img {
+        margin: 50px 0px;
+        padding: 0;
+    }
+
+    .hero-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+
+
+    .links {
+        justify-content: center;
+    }
     .right {
         margin: 0;
         padding: 0;
     }
     header {
-
         flex-direction: column;
         
-
     }
     nav, a{
         padding: 10px 0px;
         
     }
-
 }

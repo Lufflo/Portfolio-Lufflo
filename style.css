@@ -33,7 +33,6 @@ body{
 header {
     top: 0;
     width: 100%;
-        /* Otros estilos para el encabezado */
     position: fixed;
     display: flex;
     justify-content: space-between;
